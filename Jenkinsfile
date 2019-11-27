@@ -12,7 +12,7 @@ pipeline {
      stage('Build') {
       steps {
         container('maven') {
-         dir('Jenkinsfile') {
+         dir('TestService') {
 		 sh 'mvn -version'
 			}
         }
