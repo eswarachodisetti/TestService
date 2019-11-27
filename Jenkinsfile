@@ -15,6 +15,7 @@ pipeline {
          dir('TestService') {
 		 checkout scm
 		 sh 'mvn -version'
+		 sh 'ls -lart'
 		 sh 'mvn clean install'
 			}
         }
