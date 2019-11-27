@@ -13,6 +13,7 @@ pipeline {
       steps {
         container('maven') {
          dir('TestService') {
+		 checkout scm
 		 sh 'mvn -version'
 			}
         }
