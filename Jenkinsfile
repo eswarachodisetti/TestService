@@ -14,9 +14,7 @@ pipeline {
         container('maven') {
          dir('TestService') {
 		 checkout scm
-		 sh 'mvn -version'
-		 sh 'ls -lart'
-		 sh 'mvn clean install'
+		 sh 'cd TestService && ls -lart && mvn clean install'
 			}
         }
 
