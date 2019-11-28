@@ -14,7 +14,8 @@ pipeline {
         container('maven') {
          dir('TestService') {
 		 checkout scm
-		 sh 'cd TestService && ls -lart && mvn clean install'
+		 sh 'cd /home/jenkins/ && ls -lart'
+	//	 sh 'cd TestService && ls -lart && mvn clean deploy'
 		 sleep 300
 			}
         }
