@@ -15,7 +15,7 @@ pipeline {
          dir('TestService') {
 		 checkout scm
 		 sh 'cd TestService && ls -lart && mvn clean install'
-		 sleep 120
+		 sleep 300
 			}
         }
 
