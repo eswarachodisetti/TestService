@@ -11,7 +11,27 @@
 	<!-- <repositories> <repository> <id>local-repo</id> <url>file://${project.basedir}/lib</url> 
 		</repository> </repositories> -->
 
-
+<distributionManagement>
+    <snapshotRepository>
+        <id>my-repo-bucket-snapshot</id>
+        <url>gs://pocmavenrepository/snapshot</url>
+    </snapshotRepository>
+    <repository>
+        <id>my-repo-bucket-release</id>
+        <url>gs://pocmavenrepository/release</url>
+    </repository>
+</distributionManagement>
+	
+<repositories>
+    <repository>
+        <id>my-repo-bucket-snapshot</id>
+        <url>gs://pocmavenrepository/snapshot</url>
+    </repository>
+    <repository>
+        <id>my-repo-bucket-release</id>
+        <url>gs://pocmavenrepository/release</url>
+    </repository>
+</repositories>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -280,5 +300,17 @@
 
 		</plugins>
 
+		
+	<extensions>
+            <extension>
+                <groupId>com.gkatzioura.maven.cloud</groupId>
+                <artifactId>google-storage-wagon</artifactId>
+                <!-- version 1.8 seems to produce exception, ticket logged -->
+                <version>1.7</version>
+            </extension>
+        </extensions>
+		
+		
+		
 	</build>
 </project>
