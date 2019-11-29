@@ -15,7 +15,8 @@ pipeline {
          dir('TestService') {
 		 sh 'rm -rf *'
 		 //checkout scm
-		 checkout([$class: ‘GitSCM’, branches: [[name: ‘origin/master’]], userRemoteConfigs: [[url: ‘git@github.com:eswarachodisetti/TestService.git’]]])
+		 
+		 git branch: 'master', url: 'git@github.com:eswarachodisetti/TestService.git'
 		// sh 'export GOOGLE_APPLICATION_CREDENTIALS=/home/jenkins/.gcp/.dockerconfigjson'
 		// sh 'cd /home/jenkins/ && ls -lart'
 		// sh 'cd TestService && ls -lart && mvn clean deploy'
