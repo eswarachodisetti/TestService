@@ -14,11 +14,12 @@
 <distributionManagement>
     <snapshotRepository>
         <id>my-repo-bucket-snapshot</id>
-        <url>gs://pocmavenrepository/snapshot</url>
+        <url>nexus.jx.35.229.61.119.nip.io/snapshot</url>
+	<uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
     <repository>
         <id>my-repo-bucket-release</id>
-        <url>gs://pocmavenrepository/release</url>
+        <url>nexus.jx.35.229.61.119.nip.io/release</url>
     </repository>
 </distributionManagement>
 	
