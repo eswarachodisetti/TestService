@@ -41,7 +41,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-
+	<scm>
+        <connection>scm:git:https://github.com/eswarachodisetti/TestService.git</connection>
+        <url>https://github.com/eswarachodisetti/TestService</url>
+      <tag>HEAD</tag>
+  </scm>
 
 
 	<dependencies>
@@ -297,6 +301,12 @@
 				<resource> <directory>lib</directory> <targetPath>WEB-INF/lib</targetPath> 
 				<includes> <include>**/*.jar</include> </includes> </resource> </webResources> 
 				</configuration> </plugin> -->
+			
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </plugin>
 
 
 		</plugins>
