@@ -14,12 +14,12 @@
 <distributionManagement>
     <snapshotRepository>
         <id>my-repo-bucket-snapshot</id>
-        <url>nexus.jx.35.229.61.119.nip.io/snapshot</url>
+        <url>nexus.jx.35.229.61.119.nip.io/maven-snapshots</url>
 	<uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
     <repository>
         <id>my-repo-bucket-release</id>
-        <url>nexus.jx.35.229.61.119.nip.io/release</url>
+        <url>nexus.jx.35.229.61.119.nip.io/maven-release</url>
     </repository>
 </distributionManagement>
 	
