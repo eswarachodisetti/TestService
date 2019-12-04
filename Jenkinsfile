@@ -9,7 +9,7 @@ pipeline {
     APPLICATION = "TestService"
     DEPLOY_NAMESPACE = "jx-production"
     VERSION = "1.0.0-$BUILD_NUMBER"
-    GROUP_ID = "com.TestWebservice"
+    GROUP_ID = "com/TestWebservice"
     ARTIFACT_ID = "TestWebservice"
     MAVEN_VERSION = "0.0.1-SNAPSHOT"
     EXTENTION = "war"
