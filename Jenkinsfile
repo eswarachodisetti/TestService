@@ -24,8 +24,8 @@ pipeline {
          dir("$APPLICATION") {
 		 sh 'ls -lart && mvn -B clean deploy'
 		 sh 'chmod u+x *.sh && ./nexus.sh $GROUP_ID $ARTIFACT_ID $MAVEN_VERSION $EXTENTION'
-		// sh 'mv *.war ../'
-		 sleep 60
+		 sh 'mv *.war ../'
+		
 			}
         }
       }
